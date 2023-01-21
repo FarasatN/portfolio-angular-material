@@ -1,0 +1,66 @@
+<section id="contact">
+    <div class="container">
+      <mat-card>
+        <!--<mat-card-header>-->
+        <h2 class="mat-display-2 text-center mb-0">Contact Me</h2>
+        
+        <!--</mat-card-header>-->
+        <mat-card-content fxLayoutAlign="center">
+          <form class="contact-form" action="https://formspree.io/anthony.na@hotmail.de" method="POST">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>{{ 'CONTACT.NAME'}}</mat-label>
+              <input matNativeControl id="name" name="name" type="text" placeholder="Name" required="required" />
+            </mat-form-field>
+  
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>{{ 'CONTACT.EMAIL'}}</mat-label>
+              <input
+                matInput
+                #characterCountInputHintExample
+                maxLength="40"
+                id="email"
+                name="_replyto"
+                type="email"
+                placeholder="Email Address"
+                required="required"
+              />
+              <mat-hint align="end" aria-live="polite">
+                {{ characterCountInputHintExample.value.length }} / 100
+              </mat-hint>
+            </mat-form-field>
+  
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>{{ 'CONTACT.PHONE_NUMBER'}}</mat-label>
+              <input
+                id="phone-number"
+                name="phone-number"
+                type="tel"
+                matInput
+                #characterCountInputHintExample
+                maxLength="20"
+              />
+            </mat-form-field>
+  
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>{{ 'CONTACT.MESSAGE'}}</mat-label>
+              <textarea
+                id="message"
+                name="message"
+                matInput
+                #characterCountTextareaHintExample
+                maxLength="100"
+              ></textarea>
+              <mat-hint align="end" aria-live="polite">
+                {{ characterCountTextareaHintExample.value.length }} / 100
+              </mat-hint>
+            </mat-form-field>
+  
+            <button class="full-width" mat-button color="accent">
+              {{ 'CONTACT.SEND'}}
+              <mat-icon>send</mat-icon>
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>

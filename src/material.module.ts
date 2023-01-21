@@ -44,6 +44,9 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
 // import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   exports: [
     // NgxMatSelectSearchModule,
@@ -103,7 +106,9 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     MatMenuModule,
     MatInputModule,
     MatMomentDateModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+
+    FormsModule, ReactiveFormsModule
   ],
 })
 export class MaterialModule {}
