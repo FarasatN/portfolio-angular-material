@@ -1,0 +1,124 @@
+// @import '../../styles.scss';
+// @use "$pr";
+
+$primary-color:#014255;
+$secondary-color:#fa811f;
+
+
+// nav{
+//     color: $primary-color;
+// }
+
+nav mat-toolbar{
+    background-color: $primary-color;
+    // color: $primary-color;
+}
+
+.toolbar-item-spacer {
+    flex: 1 1 auto;
+}
+
+.app-container {
+    // margin-top: 50px;
+    // padding-top: 50px;
+    height: 100%;
+}  
+.app-sidenav {
+    height: 100%;
+}
+
+// .app-sidenav mat-list-item{
+//     // margin-top: 100px;
+// }
+
+
+.app-sidenav-content {
+    color: rgb(1, 66, 85,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+} 
+
+//----------------------
+
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+}
+  
+.example-radio-button {
+    margin: 5px;
+}
+
+//-------------------------
+
+
+
+
+@media screen and (max-width: 998px) {
+    .nav-large{
+        display: none;
+      }
+    .menu{
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 998px) {
+    .nav-large{
+        display: flex;
+    }
+    .menu{
+        display: none;
+    }
+
+}
+
+.nav-list {
+    justify-content: space-around;
+}
+
+.nav-list mat-list-item{
+    width: fit-content;
+    margin: 5px;
+    border-radius: 40px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+
+.nav-list mat-icon{
+    color: white;
+}
+
+.nav-list span{
+    margin-left: 10px;
+    color: white;
+    font-size: medium;
+}
+
+.app-sidenav mat-nav-list mat-list-item mat-icon{
+    color: #014255;
+}
+
+//-----------------------------------------
+
+.active{
+    background: #07bef6
+}
+
+::ng-deep.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color: rgba(0, 0, 0, .1) !important;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #014255!important;   /*inner circle color change*/
+}
+
+::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+   border-color: #014255!important; /*outer ring color change*/
+}

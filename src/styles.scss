@@ -6,3 +6,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 *{
     transition: all 0.2s;
 }
+
+:root {
+    --color-primary: #014255;
+    --color-secondary: #fa811f;
+    $primary-color:#014255;
+    $secondary-color:#fa811f;
+  }
+
+$primary-color:#014255;
+$secondary-color:#fa811f;

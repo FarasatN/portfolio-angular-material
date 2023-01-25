@@ -12,6 +12,8 @@ import { ResumeComponent } from './resume/resume.component';
 import { WorksComponent } from './works/works.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HomeComponent } from './home/home.component';
     ResumeComponent,
     WorksComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
