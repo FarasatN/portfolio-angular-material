@@ -1,6 +1,7 @@
 $primary-color:#014255;
-$secondary-color:#fa811f;
+$secondary-color:#fdba0e;
 
+    
 
 .toolbar-item-spacer {
     flex: 1 1 auto;
@@ -88,26 +89,28 @@ $secondary-color:#fa811f;
 
 
 .social-links a{
-    border: .1rem solid white;
+    // border: .1rem solid white;
     border-radius: 3rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    text-decoration: none;
+    margin-right: 5px;
+
 }
 
-.social-links a:hover{
-    border: .17rem solid $secondary-color;
-}
+// .social-links a:hover{
+//     // border: .17rem solid $secondary-color;
+// }
 
 .social-links a i{
     color: white;
-    border-bottom: 0;
+    opacity: .7;
 }
 
 .social-links a i:hover{
     color: $secondary-color;
-    border-bottom: none;
 }

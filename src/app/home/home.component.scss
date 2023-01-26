@@ -1,12 +1,20 @@
 //--------------------------------
 $primary-color:#014255;
-$secondary-color:#fa811f;
+$secondary-color:#fdba0e;
 //--------------------------------
+
+@media screen and (max-width: 998px) {
+    .home{
+        height: 100vh;
+    }
+    
+}
 
 .home {
     background: url(../../assets/sky-early-morning.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    // opacity: .9;
 }
 
 .hero h1{
@@ -31,17 +39,27 @@ $secondary-color:#fa811f;
 //-----------------------------
 
 mat-card{
-    background-color:rgb(4, 65, 84,0.1);
+    background-color:rgba(1, 30, 40, 0.3);
 }
 
 mat-card button{
-    background-color: rgb(99, 33, 213);
+    background-color: $primary-color;
     color: white;
 }
 
+mat-card button:hover{
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
 mat-card a{
-    background-color: rgb(99, 33, 213);
+    background-color: $primary-color;
     color: white;
+}
+
+mat-card a:hover{
+    background-color: $primary-color;
+    color: $secondary-color;
 }
 
 mat-card .login-to-download{
@@ -51,18 +69,54 @@ mat-card .login-to-download{
 //-----------------------------
 
 
-mat-card .social-links a{
-    border: .1rem solid #b6cbce;
-    border-radius: 3rem;
+// mat-card .social-links a{
+//     border: .1rem solid #b6cbce;
+//     border-radius: 3rem;
+//     width: 2.5rem;
+//     height: 2.5rem;
+//     display: inline-flex;
+//     align-items: center;
+//     justify-content: center;
+//     font-size: 1.5rem;
+//     margin-right: .5rem;
+//   }
+  
+//   mat-card .social-links a:hover{
+//     border: .17rem solid #deff58;
+//   }
+
+  //------------------------------
+//   mat-card .social-links{
+//     margin-right: 5px;
+//   }
+
+mat-card .typed{
+    color: $secondary-color;
+}
+  
+  mat-card .social-links a{
+    // border: .1rem solid white;
+    border-radius: 2rem;
     width: 2.5rem;
     height: 2.5rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    margin-right: .5rem;
-  }
-  
-  mat-card .social-links a:hover{
-    border: .17rem solid #deff58;
-  }
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+mat-card .social-links a:hover i{
+    // border: .17rem solid $secondary-color;
+    color: $secondary-color;
+}
+
+mat-card .social-links a i{
+    color: white;
+}
+
+mat-card .social-links a i:hover{
+    color: $secondary-color;
+}
+

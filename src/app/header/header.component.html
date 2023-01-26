@@ -2,32 +2,32 @@
 <nav class="fixed-top" *ngIf="router.url=='/home' || router.url=='/about' || router.url=='/skills' || router.url=='/contact' || router.url=='/resume' || router.url=='/works' || router.url==''">
     <mat-toolbar color="primary">
       <button class="menu" mat-icon-button (click)="sidenav.toggle()" matTooltip="Menu">
-          <mat-icon>menu</mat-icon>
+          <mat-icon id="menu">menu</mat-icon>
       </button>
       <span class="toolbar-item-spacer"></span>
       <div class="nav-large text-center">
         <mat-nav-list class="nav-list d-flex flex-row mb-2">
-          <mat-list-item routerLink="/home" routerLinkActive="activebutton" ariaCurrentWhenActive="page">
+          <mat-list-item id="home2" routerLink="/home" routerLinkActive="active" routerLinkActive="active" ariaCurrentWhenActive="page">
               <mat-icon>home</mat-icon><span >Home</span>
           </mat-list-item>
 
-          <mat-list-item routerLink="/about" ariaCurrentWhenActive="page">
+          <mat-list-item routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">
             <mat-icon>person</mat-icon><span >About</span>
           </mat-list-item>
 
-          <mat-list-item routerLink="/skills" ariaCurrentWhenActive="page">
+          <mat-list-item routerLink="/skills" routerLinkActive="active" ariaCurrentWhenActive="page">
             <mat-icon>auto_graph</mat-icon><span >Skills</span>
           </mat-list-item>
 
-          <mat-list-item routerLink="/resume" ariaCurrentWhenActive="page">
+          <mat-list-item routerLink="/resume" routerLinkActive="active" ariaCurrentWhenActive="page">
             <mat-icon>description</mat-icon><span>Resume</span>
           </mat-list-item>
 
-          <mat-list-item  routerLink="/works" ariaCurrentWhenActive="page">
+          <mat-list-item  routerLink="/works" routerLinkActive="active" ariaCurrentWhenActive="page">
             <mat-icon>code</mat-icon><span>Works</span>
           </mat-list-item>
 
-          <mat-list-item routerLink="/contact" ariaCurrentWhenActive="page">
+          <mat-list-item routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">
             <mat-icon >mail_outline</mat-icon><span>Contact</span>
           </mat-list-item>
 
@@ -35,7 +35,7 @@
       </div>
       <span class="toolbar-item-spacer"></span>
       
-      <button mat-icon-button [matMenuTriggerFor]="menu"  matTooltip="Languages">
+      <button id="lang" mat-icon-button [matMenuTriggerFor]="menu"  matTooltip="Languages">
           <mat-icon>language</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
@@ -55,8 +55,8 @@
     <mat-sidenav-container class="app-container" autosize>
       <mat-sidenav #sidenav class="app-sidenav" class="mat-elevation-z8" mode="over">
         <div class="conatiner mt-5">
-          <mat-nav-list>
-            <mat-list-item (click)="sidenav.toggle()" routerLink="/home" routerLinkActive="active">
+          <mat-nav-list id="side-list">
+            <mat-list-item id="home" (click)="sidenav.toggle()" routerLink="/home" routerLinkActive="active">
                 <mat-icon style="color: #014255;">home</mat-icon><span class="ms-4">Home</span>
             </mat-list-item>
   

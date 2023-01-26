@@ -2,7 +2,7 @@
 // @use "$pr";
 
 $primary-color:#014255;
-$secondary-color:#fa811f;
+$secondary-color:#fdba0e;
 
 
 // nav{
@@ -107,18 +107,72 @@ nav mat-toolbar{
 
 //-----------------------------------------
 
-.active{
-    background: #07bef6
+#side-list .active{
+    background: rgb(236, 236, 236)
 }
 
-::ng-deep.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
-    background-color: rgba(0, 0, 0, .1) !important;
+.active mat-icon{
+    color: $secondary-color!important;
 }
 
-::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+.active span{
+    color: $secondary-color!important;
+}
+
+// .mat-nav-list .mat-list-item:focus,
+// .mat-action-list .mat-list-item:focus,
+// .mat-list-option:focus {
+//   background: #fff !important;
+// }
+
+
+#home:focus{
+    background: rgb(236, 236, 236) !important;
+}
+#home:hover{
+    background: rgb(236, 236, 236) !important;
+}
+#home:not(.active){
+    background: #fff !important;
+}
+
+
+
+// #home2:hover{
+//     // background: rgb(236, 236, 236) !important;
+// }
+// #home2:not(.active){
+//     // background: #fff !important;
+// }
+
+
+
+
+#menu:hover{
+    color: $secondary-color;
+    // background-color: $secondary-color;
+}
+
+#lang:hover{
+    color: $secondary-color;
+}
+
+.nav-list mat-list-item:hover 
+mat-icon{
+    color: $secondary-color;
+}
+
+.nav-list mat-list-item:hover 
+span{
+    color: $secondary-color;
+}
+
+
+
+::ng-deep .mat-radio-button.mat-primary .mat-radio-inner-circle {
     background-color: #014255!important;   /*inner circle color change*/
 }
 
-::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+::ng-deep.mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
    border-color: #014255!important; /*outer ring color change*/
 }

@@ -1,9 +1,40 @@
 $primary-color:#014255;
-$secondary-color:#fa811f;
+$secondary-color:#fdba0e;
 
-.example-card{
-    height: 80vh;
-    margin: 20px 0;
-    margin-top: 70px;
-    // margin-bottom: 80px;
+mat-card-title{
+  color: $primary-color;
+}
+
+hr{
+  color: $secondary-color;
+  background-color: $secondary-color;
+  border: 1px solid $secondary-color;
+  height: 2px;
+}
+
+.fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+.container {
+  padding: 10px;
+}
+
+// .form {
+//   min-width: 150px;
+//   max-width: 500px;
+//   width: 100%;
+// }
+
+.form-element {
+  padding: 5px 0px 25px 2px;
+  width: 100%;
+}
+
+.subm {
+  width: 100%;
+  color: #fff;
+  background-color: $primary-color;
 }
