@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Typed from 'typed.js';
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-home',
@@ -20,6 +22,8 @@ export class HomeComponent implements OnInit {
     
     var typed = new Typed('.typed', options);
     typed.reset(true)
+
+    AOS.init()
   }
 
 }

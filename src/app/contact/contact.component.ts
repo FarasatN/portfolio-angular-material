@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/internal/Observable';
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-contact',
@@ -18,6 +20,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.createForm();
     // this.setChangeValidate()
+    AOS.init()
   }
 
   createForm() {

@@ -38,3 +38,26 @@ hr{
   color: #fff;
   background-color: $primary-color;
 }
+
+@media screen and (max-width: 768px) {
+  .img-prof{
+    margin-bottom: 10px;
+  }
+  img{
+    width: 30%;
+  }
+
+  .about-row{
+    font-size: 12px;
+    line-height: 14px;
+  }
+  
+}
+
+
+.list-unstyled li i{
+  color: $secondary-color;
+}
+.list-unstyled li strong{
+  color: $primary-color;
+}

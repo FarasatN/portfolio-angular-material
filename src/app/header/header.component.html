@@ -1,5 +1,5 @@
 
-<nav class="fixed-top" *ngIf="router.url=='/home' || router.url=='/about' || router.url=='/skills' || router.url=='/contact' || router.url=='/resume' || router.url=='/works' || router.url==''">
+<nav  class="fixed-top" *ngIf="router.url=='/home' || router.url=='/about' || router.url=='/skills' || router.url=='/contact' || router.url=='/resume' || router.url=='/works' || router.url==''">
     <mat-toolbar color="primary">
       <button class="menu" mat-icon-button (click)="sidenav.toggle()" matTooltip="Menu">
           <mat-icon id="menu">menu</mat-icon>
@@ -7,7 +7,7 @@
       <span class="toolbar-item-spacer"></span>
       <div class="nav-large text-center">
         <mat-nav-list class="nav-list d-flex flex-row mb-2">
-          <mat-list-item id="home2" routerLink="/home" routerLinkActive="active" routerLinkActive="active" ariaCurrentWhenActive="page">
+          <mat-list-item routerLink="/home" routerLinkActive="active" routerLinkActive="active" ariaCurrentWhenActive="page">
               <mat-icon>home</mat-icon><span >Home</span>
           </mat-list-item>
 
@@ -15,7 +15,7 @@
             <mat-icon>person</mat-icon><span >About</span>
           </mat-list-item>
 
-          <mat-list-item routerLink="/skills" routerLinkActive="active" ariaCurrentWhenActive="page">
+          <mat-list-item  routerLink="/skills" routerLinkActive="active" ariaCurrentWhenActive="page">
             <mat-icon>auto_graph</mat-icon><span >Skills</span>
           </mat-list-item>
 
@@ -23,7 +23,7 @@
             <mat-icon>description</mat-icon><span>Resume</span>
           </mat-list-item>
 
-          <mat-list-item  routerLink="/works" routerLinkActive="active" ariaCurrentWhenActive="page">
+          <mat-list-item routerLink="/works" routerLinkActive="active" ariaCurrentWhenActive="page">
             <mat-icon>code</mat-icon><span>Works</span>
           </mat-list-item>
 
@@ -87,6 +87,7 @@
       <mat-sidenav-content >
         
         <router-outlet></router-outlet>
+
         <app-footer></app-footer>
 
       </mat-sidenav-content>

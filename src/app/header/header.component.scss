@@ -3,7 +3,12 @@
 
 $primary-color:#014255;
 $secondary-color:#fdba0e;
+$background-color:rgb(1, 66, 85,.1);
 
+
+mat-sidenav-content{
+    background-color: $background-color;
+}
 
 // nav{
 //     color: $primary-color;

@@ -1,6 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ThemePalette } from '@angular/material/core';
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-header',
@@ -24,19 +26,26 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.currentYear=new Date().getFullYear();
     this.screenWidth = window.innerWidth;
+    AOS.init()
   }
 
   
   title = 'portfolio-angular-material';
   showFiller = false;
 
-  languages: string[] = ['English', 'Russian', 'Azerbaijan'];
+  languages: string[] = ['English', 'Русский', 'Azərbaycan'];
 
   selectedLanguage: number = 0;
 
   radioButtonChange(index:number){
     this.selectedLanguage = index;
     console.log(index);
+  }
+
+
+  scrollTo(section) {
+    document.querySelector('#' + section)
+    .scrollIntoView();
   }
 
 

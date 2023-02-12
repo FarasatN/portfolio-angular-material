@@ -38,3 +38,17 @@ hr{
   color: #fff;
   background-color: $primary-color;
 }
+
+//----------------------------------
+
+.card{
+  // margin: 0 5px;
+   border:0;
+  // border: 1px solid $secondary-color;
+  // opacity: .8;
+}
+
+.card-content .container .row  .card hr{
+  color: #014255!important;
+  background-color: #014255!important;
+}
