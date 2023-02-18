@@ -22,12 +22,6 @@ hr{
   padding: 10px;
 }
 
-// .form {
-//   min-width: 150px;
-//   max-width: 500px;
-//   width: 100%;
-// }
-
 .form-element {
   padding: 5px 0px 25px 2px;
   width: 100%;
@@ -42,13 +36,21 @@ hr{
 //----------------------------------
 
 .card{
-  // margin: 0 5px;
+ 
    border:0;
-  // border: 1px solid $secondary-color;
-  // opacity: .8;
+
 }
 
 .card-content .container .row  .card hr{
   color: #014255!important;
   background-color: #014255!important;
+}
+
+h2{
+  color: #00546d;
+}
+
+h4{
+  color: #de8f10;
+  font-weight: 500;
 }

@@ -36,13 +36,13 @@ export class AppComponent implements OnInit{
 
 
 
-  onSectionChange(sectionId: string) {
-    this.currentSection = sectionId;
-  }
+  // onSectionChange(sectionId: string) {
+  //   this.currentSection = sectionId;
+  // }
 
-  scrollTo(section) {
-    document.querySelector('#' + section)
-    .scrollIntoView();
-  }
+  // scrollTo(section) {
+  //   document.querySelector('#' + section)
+  //   .scrollIntoView();
+  // }
 
 }

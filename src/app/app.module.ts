@@ -14,7 +14,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ScrollSpyDirective } from './scroll-spy.directive';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore/'; 
 import { environment } from 'src/environments/environment';
@@ -33,7 +32,6 @@ import { environment } from 'src/environments/environment';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ScrollSpyDirective
   ],
   imports: [
     BrowserModule,
