@@ -50,7 +50,11 @@ data-aos-duration="500">
                     
                         <div class="form-element">
                           <button mat-raised-button type="submit" class="button subm" [disabled]="!formGroup.valid">Submit Form</button>
+
                         </div>
+
+                      <p *ngIf="isSubmit" class="submitMessage" style="font-weight:bold;display:block;color: rgb(0, 185, 62);">{{submitMessage}}</p>
+                        
                     
                       </form>
                     </div>

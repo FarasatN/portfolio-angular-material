@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/internal/Observable';
 import AOS from 'aos';
+// import { AngularFireModule } from '@angular/fire/compat';
+// import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 
 
 @Component({
@@ -14,10 +17,14 @@ export class ContactComponent implements OnInit {
   formGroup: FormGroup;
   titleAlert: string = 'This field is required';
   post: any = '';
+  isSubmit = true;
+  submitMessage = '';
+  private contactForm: AngularFirestoreCollection<any>;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private firestore: AngularFirestore) { }
 
   ngOnInit() {
+    this.contactForm = this.firestore.collection('contact')
     this.createForm();
     // this.setChangeValidate()
     AOS.init()
@@ -42,6 +49,47 @@ export class ContactComponent implements OnInit {
     });
   }
 
+
+  get name() {
+    return this.formGroup.get('name') as FormControl
+  }
+
+
+  getErrorEmail() {
+    return this.formGroup.get('email')?.hasError('required') ? 'This field is required' :
+      this.formGroup.get('email')?.hasError('pattern') ? 'Not a valid emailaddress' :
+        this.formGroup.get('email')?.hasError('alreadyInUse') ? 'This emailaddress is already in use' : '';
+  }
+
+  
+
+  onSubmit(post:any) {
+    console.log(post);
+    this.post = post;
+    this.contactForm.add(post).then(res=>{
+      this.submitMessage = 'Submitted successfully';
+    })
+    .catch(err=>{
+      console.log(err)
+    })
+
+
+    this.isSubmit = true;
+    this.submitMessage = 'Submitted successfully'
+    // window.location.reload();
+    // this.formGroup.reset()
+
+    setTimeout(()=>{
+      this.isSubmit=false;
+      // window.location.reload();
+    },5000);
+
+  }
+
+
+
+
+
   // setChangeValidate() {
   //   this.formGroup.get('validate')?.valueChanges.subscribe(
   //     (validate) => {
@@ -55,10 +103,6 @@ export class ContactComponent implements OnInit {
   //     }
   //   )
   // }
-
-  get name() {
-    return this.formGroup.get('name') as FormControl
-  }
 
   // checkPassword(control:any) {
   //   let enteredPassword = control.value
@@ -78,21 +122,8 @@ export class ContactComponent implements OnInit {
   //   })
   // }
 
-  getErrorEmail() {
-    return this.formGroup.get('email')?.hasError('required') ? 'This field is required' :
-      this.formGroup.get('email')?.hasError('pattern') ? 'Not a valid emailaddress' :
-        this.formGroup.get('email')?.hasError('alreadyInUse') ? 'This emailaddress is already in use' : '';
-  }
-
   // getErrorPassword() {
   //   return this.formGroup.get('password')?.hasError('required') ? 'Field is required (at least eight characters, one uppercase letter and one number)' :
   //     this.formGroup.get('password')?.hasError('requirements') ? 'Password needs to be at least eight characters, one uppercase letter and one number' : '';
   // }
-
-  onSubmit(post:any) {
-    this.post = post;
-    console.log(post);
-    // this.formGroup.reset()
-    window.location.reload();
-  }
 }

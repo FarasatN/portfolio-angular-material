@@ -298,7 +298,7 @@ function ContactComponent_mat_error_19_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, " This field is required ");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } }
-function ContactComponent_ng_template_23_Template(rf, ctx) { if (rf & 1) {
+function ContactComponent_ng_template_25_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "json");
@@ -313,6 +313,8 @@ class ContactComponent {
         this.formBuilder = formBuilder;
         this.titleAlert = 'This field is required';
         this.post = '';
+        this.isSubmit = true;
+        this.submitMessage = '';
     }
     ngOnInit() {
         this.createForm();
@@ -381,12 +383,12 @@ class ContactComponent {
     onSubmit(post) {
         this.post = post;
         console.log(post);
-        // this.formGroup.reset()
-        window.location.reload();
+        this.formGroup.reset();
+        // window.location.reload();
     }
 }
 ContactComponent.ɵfac = function ContactComponent_Factory(t) { return new (t || ContactComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_2__.FormBuilder)); };
-ContactComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: ContactComponent, selectors: [["app-contact"]], decls: 25, vars: 5, consts: [["id", "contact", "data-aos", "flip-up", "data-aos-easing", "ease-out-cubic", "data-aos-duration", "500", 1, "contact"], [1, "container", "my-5"], [1, "row", "my-3"], [1, "example-card"], [1, "row", "card-content", "justify-content-center", "align-items-center", "ms-2"], [1, "container"], [1, "form", 3, "formGroup", "ngSubmit"], [1, "form-element"], ["matInput", "", "placeholder", "Email address", "formControlName", "email"], [4, "ngIf"], ["matInput", "", "placeholder", "Name", "formControlName", "name"], ["matInput", "", "placeholder", "Message", "matTextareaAutosize", "", "matAutosizeMinRows", "2", "matAutosizeMaxRows", "7", "formControlName", "description"], ["mat-raised-button", "", "type", "submit", 1, "button", "subm", 3, "disabled"], ["forminfo", ""]], template: function ContactComponent_Template(rf, ctx) { if (rf & 1) {
+ContactComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: ContactComponent, selectors: [["app-contact"]], decls: 27, vars: 6, consts: [["id", "contact", "data-aos", "flip-up", "data-aos-easing", "ease-out-cubic", "data-aos-duration", "500", 1, "contact"], [1, "container", "my-5"], [1, "row", "my-3"], [1, "example-card"], [1, "row", "card-content", "justify-content-center", "align-items-center", "ms-2"], [1, "container"], [1, "form", 3, "formGroup", "ngSubmit"], [1, "form-element"], ["matInput", "", "placeholder", "Email address", "formControlName", "email"], [4, "ngIf"], ["matInput", "", "placeholder", "Name", "formControlName", "name"], ["matInput", "", "placeholder", "Message", "matTextareaAutosize", "", "matAutosizeMinRows", "2", "matAutosizeMaxRows", "7", "formControlName", "description"], ["mat-raised-button", "", "type", "submit", 1, "button", "subm", 3, "disabled"], [2, "display", ""], ["forminfo", ""]], template: function ContactComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "mat-card", 3)(4, "mat-card-header")(5, "mat-card-title");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, "Contact");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "hr");
@@ -407,8 +409,11 @@ ContactComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1_
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "div", 7)(21, "button", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](22, "Submit Form");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, ContactComponent_ng_template_23_Template, 3, 3, "ng-template", null, 13, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplateRefExtractor"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](23, "p", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, ContactComponent_ng_template_25_Template, 3, 3, "ng-template", null, 14, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplateRefExtractor"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](10);
@@ -421,6 +426,8 @@ ContactComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1_
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.formGroup.controls["description"].valid && ctx.formGroup.controls["description"].touched);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("disabled", !ctx.formGroup.valid);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx.submitMessage);
     } }, dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_3__.NgIf, _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__.MatError, _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__.MatFormField, _angular_material_input__WEBPACK_IMPORTED_MODULE_5__.MatInput, _angular_material_button__WEBPACK_IMPORTED_MODULE_6__.MatButton, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardHeader, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardTitle, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.FormControlName, _angular_common__WEBPACK_IMPORTED_MODULE_3__.JsonPipe], styles: ["mat-card-title[_ngcontent-%COMP%] {\n  color: #014255;\n}\n\nhr[_ngcontent-%COMP%] {\n  color: #fdba0e;\n  background-color: #fdba0e;\n  border: 1px solid #fdba0e;\n  height: 2px;\n}\n\n.fill-remaining-space[_ngcontent-%COMP%] {\n  \n  flex: 1 1 auto;\n}\n\n.container[_ngcontent-%COMP%] {\n  padding: 10px;\n}\n\n.form-element[_ngcontent-%COMP%] {\n  padding: 5px 0px 25px 2px;\n  width: 100%;\n}\n\n.subm[_ngcontent-%COMP%] {\n  width: 100%;\n  color: #fff;\n  background-color: #014255;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnRhY3QuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBR0E7RUFDRSxjQUphO0FBRWY7O0FBS0E7RUFDRSxjQVBlO0VBUWYseUJBUmU7RUFTZix5QkFBQTtFQUNBLFdBQUE7QUFGRjs7QUFLQTtFQUNFO21EQUFBO0VBRUEsY0FBQTtBQUZGOztBQUtBO0VBQ0UsYUFBQTtBQUZGOztBQVdBO0VBQ0UseUJBQUE7RUFDQSxXQUFBO0FBUkY7O0FBV0E7RUFDRSxXQUFBO0VBQ0EsV0FBQTtFQUNBLHlCQXRDYTtBQThCZiIsImZpbGUiOiJjb250YWN0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiJHByaW1hcnktY29sb3I6IzAxNDI1NTtcclxuJHNlY29uZGFyeS1jb2xvcjojZmRiYTBlO1xyXG5cclxubWF0LWNhcmQtdGl0bGV7XHJcbiAgY29sb3I6ICRwcmltYXJ5LWNvbG9yO1xyXG59XHJcblxyXG5ocntcclxuICBjb2xvcjogJHNlY29uZGFyeS1jb2xvcjtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAkc2Vjb25kYXJ5LWNvbG9yO1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkICRzZWNvbmRhcnktY29sb3I7XHJcbiAgaGVpZ2h0OiAycHg7XHJcbn1cclxuXHJcbi5maWxsLXJlbWFpbmluZy1zcGFjZSB7XHJcbiAgLyogVGhpcyBmaWxscyB0aGUgcmVtYWluaW5nIHNwYWNlLCBieSB1c2luZyBmbGV4Ym94LiBcclxuICAgICBFdmVyeSB0b29sYmFyIHJvdyB1c2VzIGEgZmxleGJveCByb3cgbGF5b3V0LiAqL1xyXG4gIGZsZXg6IDEgMSBhdXRvO1xyXG59XHJcblxyXG4uY29udGFpbmVyIHtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG59XHJcblxyXG4vLyAuZm9ybSB7XHJcbi8vICAgbWluLXdpZHRoOiAxNTBweDtcclxuLy8gICBtYXgtd2lkdGg6IDUwMHB4O1xyXG4vLyAgIHdpZHRoOiAxMDAlO1xyXG4vLyB9XHJcblxyXG4uZm9ybS1lbGVtZW50IHtcclxuICBwYWRkaW5nOiA1cHggMHB4IDI1cHggMnB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uc3VibSB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgY29sb3I6ICNmZmY7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogJHByaW1hcnktY29sb3I7XHJcbn0iXX0= */"] });
 
 

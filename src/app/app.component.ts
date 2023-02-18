@@ -9,7 +9,8 @@ import { Router }  from "@angular/router";
 })
 export class AppComponent implements OnInit{
 
-  currentSection = 'section1';
+  // currentSection = 'section1';
+  
   currentYear?:number;
 
 
