@@ -6,12 +6,11 @@ $secondary-color:#fdba0e;
 @media screen and (max-width: 998px) {
     .home{
         height: 100vh;
-        
     }
 
     mat-card-content h1{
         font-size: 40px!important;
-        font-family: cursive!important;
+        font-family: 'Bradley Hand',cursive!important;
     }
     
 }
