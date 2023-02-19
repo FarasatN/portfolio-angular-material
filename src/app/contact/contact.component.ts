@@ -88,7 +88,7 @@ export class ContactComponent implements OnInit {
     setTimeout(()=>{
       this.isSubmit=false;
       window.location.reload();
-    },3000);
+    },4000);
       // this.formGroup.reset()
 
     
