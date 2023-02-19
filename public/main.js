@@ -380,7 +380,7 @@ class ContactComponent {
         setTimeout(() => {
             this.isSubmit = false;
             window.location.reload();
-        }, 4000);
+        }, 6000);
         // this.formGroup.reset()
     }
 }
