@@ -5,6 +5,7 @@ import AOS from 'aos';
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { getLocaleDateTimeFormat, NgClass } from '@angular/common';
 
 
 @Component({
@@ -13,15 +14,16 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/comp
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
+  code = ''
   formGroup: FormGroup;
   titleAlert: string = 'This field is required';
   post: any = '';
   isSubmit = true;
   submitMessage = '';
   private contactForm: AngularFirestoreCollection<any>;
-
-  constructor(private formBuilder: FormBuilder,private firestore: AngularFirestore) { }
+  
+  constructor(private formBuilder: FormBuilder,private firestore: AngularFirestore) {
+   }
 
   ngOnInit() {
     this.contactForm = this.firestore.collection('contact')
@@ -45,7 +47,8 @@ export class ContactComponent implements OnInit {
       ],
       // Validators.minLength(5),
     ],
-      // 'validate': ''
+      'date': new Date()
+
     });
   }
 
@@ -64,25 +67,31 @@ export class ContactComponent implements OnInit {
   
 
   onSubmit(post:any) {
-    console.log(post);
+
     this.post = post;
+    console.log(post);
     this.contactForm.add(post).then(res=>{
+      // throw new Error('Something bad happened');
       this.submitMessage = 'Submitted successfully';
+      this.code = 'success'
     })
     .catch(err=>{
       console.log(err)
+      this.submitMessage = err;
+      this.code = 'danger'
+
     })
 
+    console.log(this.submitMessage)
 
-    this.isSubmit = true;
-    this.submitMessage = 'Submitted successfully'
-    // window.location.reload();
-    // this.formGroup.reset()
-
+    this.isSubmit=true;
     setTimeout(()=>{
       this.isSubmit=false;
-      // window.location.reload();
-    },5000);
+      window.location.reload();
+    },3000);
+      // this.formGroup.reset()
+
+    
 
   }
 

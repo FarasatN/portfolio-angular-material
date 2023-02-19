@@ -370,6 +370,7 @@ class ContactComponent {
         });
         this.isSubmit = true;
         this.submitMessage = 'Submitted successfully';
+        console.log;
         // window.location.reload();
         // this.formGroup.reset()
         setTimeout(() => {

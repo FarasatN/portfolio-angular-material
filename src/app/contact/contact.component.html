@@ -53,8 +53,10 @@ data-aos-duration="500">
 
                         </div>
 
-                      <p *ngIf="isSubmit" class="submitMessage" style="font-weight:bold;display:block;color: rgb(0, 185, 62);">{{submitMessage}}</p>
-                        
+                      <div *ngIf="isSubmit" class="alert" [ngClass]="{
+                        'alert-success': code == 'success', 
+                        'alert-danger': code == 'danger'
+                        }">{{submitMessage}}</div>
                     
                       </form>
                     </div>
