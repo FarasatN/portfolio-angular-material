@@ -1,0 +1,77 @@
+{
+    "HEADER": {
+        "HOME": "Əsas Səhifə",
+        "ABOUT": "Haqqında",
+        "SKILLS": "Bilik/Bacarıqlar",
+        "RESUME": "Rezüme",
+        "WORKS": "Görülən işlər",
+        "CONTACT": "Əlaqə"
+    },
+
+    "HOME": {
+        "NAME": "Fərasət Novruzov",
+        "TYPED-1": "Mən ",
+        "TYPED-2": " proqramçıyam",
+        "RESUME": "Rezüme",
+        "CONTACT": "Əlaqə"
+    },
+    "ABOUT": {
+        "HEADER": "Haqqımda",
+        "TITLE": "Veb və mobil proqramçı",
+        "TEXT": "Yeni texnologiyalar və işləmə prinsiblərini öyrənməyə maraqlıyam. Mən biznes proseslərini təkmilləşdirməyə imkan verən ideyalar irəli sürməyi xoşlayıram. Back-End və Front-End özümü inkişaf etdirdiyim əsas sahələrdir.",
+        "CITY/COUNTRY": "Bakı/Azərbaycan",
+        "AGE": "27 yaş",
+        "TEXT2": "Müştərinin ideyasından tutmuş layihəsinin son çatdırılmasına qədər ehtiyaclarını ən yaxşı şəkildə qarşılamaq və ya mövcud layihənin təkmilləşdirilməsində iştirak etmək üçün yenilikçi və istifadəçi mərkəzli şirkət axtarıram."
+    },
+
+    "SKILLS": {
+        "HEADER": "Bilik/Bacarıqlar",
+        "TECHNOLOGIES": "Texnologiyalar",
+        "TOOLS": "Alətlər"
+    },
+
+    "RESUME": {
+        "HEADER": "Rezüme",
+        "EDUCATION": "Təhsil",
+        "EXPERIENCE": "Təcrübə",
+        "LANGUAGES": "Dillər",
+        "UNIVERSITY": "Bakı Dövlət Universiteti",
+        "UNI_FAC_NAME": "Beynəlxalq Münasibətlər",
+        "UNI_DATE": "2013 - 2017 (bakalavr)",
+        "JOB1": "Turanbank ASC",
+        "JOB1_DETAIL": "Android Proqramçı - 2023 - ",
+        "JOB2": "Atasığorta ASC",
+        "JOB2_DETAIL": "IT Mütəxəssis - 2020-2023",
+        "JOB3": "UCS Original(Bakı) ASC",
+        "JOB3_DETAIL": "IT Mütəxəssis - 2020-2020",
+        "AZ": "Azərbaycan - ana dil",
+        "EN": "İngilis - yaxşı",
+        "RU": "Rus - zəif",
+        "TUR": "Türk - əla"
+    },
+
+    "WORKS": {
+        "HEADER": "Görülən işlər",
+        "WORK1_HEADER": "Açılış səhifəsi",
+        "WORK1_CONTENT": "Baza səviyyədə Açılış Səhifəsi Html, CSS və Bootstrap5 ilə",
+        "WORK2_HEADER": "Zər Oyunu",
+        "WORK2_CONTENT": "Sadə zərr oyunu Angular və Angular MaterialUI ilə",
+        "WORK3_HEADER": "Tour Veb Saytı - Elements bölməsi",
+        "WORK3_CONTENT": "Bu bölmə html,css və Angular ilə hazırlandı",
+        "WORK4_HEADER": "Portfolio Vebsayt",
+        "WORK4_CONTENT": "Bu sayt html,css və bootstrap5 ilə hazırlandı",
+        "WORK5_HEADER": "Mobil Layihələr",
+        "WORK5_CONTENT": "Mənim hazırda Google Play-də olan tətbiqlərim. Daha çox mobil tətbiq üçün github profilimə baxa bilərsiniz.",
+        "WORK_DETAIL": "Daha Ətraflı"
+    },
+
+
+
+    "CONTACT":{
+        "HEADER": "Əlaqə",
+        "SUBMIT": "Göndər"
+    },
+
+    
+    "FOOTER": "Copyright © 2022-2023 Fərasət Novruzov."
+}
