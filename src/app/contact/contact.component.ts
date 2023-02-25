@@ -74,21 +74,29 @@ export class ContactComponent implements OnInit {
       // throw new Error('Something bad happened');
       this.submitMessage = 'Submitted successfully';
       this.code = 'success'
+      this.isSubmit=true;
+
+        setTimeout(()=>{
+          this.isSubmit=false;
+          window.location.reload();
+        },3000);
+
     })
     .catch(err=>{
       console.log(err)
       this.submitMessage = err;
       this.code = 'danger'
+      this.isSubmit=true;
+      setTimeout(()=>{
+        this.isSubmit=false;
+        // window.location.reload();
+      },20000);
 
     })
 
     console.log(this.submitMessage)
 
-    this.isSubmit=true;
-    setTimeout(()=>{
-      this.isSubmit=false;
-      window.location.reload();
-    },6000);
+    
       // this.formGroup.reset()
 
     

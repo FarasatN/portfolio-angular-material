@@ -8,37 +8,39 @@
       <div class="nav-large text-center">
         <mat-nav-list class="nav-list d-flex flex-row mb-2">
           <mat-list-item routerLink="/home" routerLinkActive="active" routerLinkActive="active" ariaCurrentWhenActive="page">
-              <mat-icon>home</mat-icon><span >Home</span>
+              <mat-icon>home</mat-icon><span translate>HEADER.HOME</span>
           </mat-list-item>
 
           <mat-list-item routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <mat-icon>person</mat-icon><span >About</span>
+            <mat-icon>person</mat-icon><span translate>HEADER.ABOUT</span>
           </mat-list-item>
 
           <mat-list-item  routerLink="/skills" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <mat-icon>auto_graph</mat-icon><span >Skills</span>
+            <mat-icon>auto_graph</mat-icon><span translate>HEADER.SKILLS</span>
           </mat-list-item>
 
           <mat-list-item routerLink="/resume" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <mat-icon>description</mat-icon><span>Resume</span>
+            <mat-icon>description</mat-icon><span translate>HEADER.RESUME</span>
           </mat-list-item>
 
           <mat-list-item routerLink="/works" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <mat-icon>code</mat-icon><span>Works</span>
+            <mat-icon>code</mat-icon><span translate>HEADER.WORKS</span>
           </mat-list-item>
 
           <mat-list-item routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <mat-icon >mail_outline</mat-icon><span>Contact</span>
+            <mat-icon >mail_outline</mat-icon><span translate>HEADER.CONTACT</span>
           </mat-list-item>
 
       </mat-nav-list>
       </div>
       <span class="toolbar-item-spacer"></span>
       
-      <button id="lang" mat-icon-button [matMenuTriggerFor]="menu"  matTooltip="Languages">
-          <mat-icon>language</mat-icon>
+      <button id="lang" mat-icon-button [matMenuTriggerFor]="menu"  matTooltip="{{lang().toUpperCase()}}">
+        <!-- {{lang().toUpperCase()}}   -->
+        <mat-icon>language</mat-icon>
       </button>
-      <mat-menu #menu="matMenu">
+
+      <!-- <mat-menu #menu="matMenu">
         <mat-radio-group
         aria-labelledby="example-radio-group-label"
         class="example-radio-group"
@@ -47,6 +49,13 @@
           {{language}}
         </mat-radio-button>
       </mat-radio-group>
+      </mat-menu> -->
+
+      <!-- <button mat-button [matMenuTriggerFor]="menu">{{lang().toUpperCase()}} <i class="material-icons">keyboard_arrow_down</i></button> -->
+          <mat-menu #menu="matMenu" class="lang-menu">
+            <button style="color:#014255;font-weight: bold;"  *ngIf='lang().toLowerCase()=="az"||lang().toLowerCase()=="ru"' mat-menu-item  (click)="useLanguage('en')">EN</button>
+            <button style="color:#014255;font-weight: bold;" *ngIf='lang().toLowerCase()=="en"||lang().toLowerCase()=="ru"' mat-menu-item  (click)="useLanguage('az')">AZ</button>
+            <button style="color:#014255;font-weight: bold;" *ngIf='lang().toLowerCase()=="az"||lang().toLowerCase()=="en"' mat-menu-item  (click)="useLanguage('ru')">RU</button>
       </mat-menu>
     
     </mat-toolbar>
@@ -57,27 +66,27 @@
         <div class="conatiner mt-5">
           <mat-nav-list id="side-list">
             <mat-list-item id="home" (click)="sidenav.toggle()" routerLink="/home" routerLinkActive="active">
-                <mat-icon style="color: #014255;">home</mat-icon><span class="ms-4">Home</span>
+                <mat-icon style="color: #014255;">home</mat-icon><span class="ms-4" translate>HEADER.HOME</span>
             </mat-list-item>
   
             <mat-list-item (click)="sidenav.toggle()" routerLinkActive="active" routerLink="/about" ariaCurrentWhenActive="page">
-              <mat-icon style="color: #014255;">person</mat-icon><span class="ms-4">About</span>
+              <mat-icon style="color: #014255;">person</mat-icon><span class="ms-4" translate>HEADER.ABOUT</span>
             </mat-list-item>
   
             <mat-list-item (click)="sidenav.toggle()" routerLinkActive="active" routerLink="/skills" ariaCurrentWhenActive="page">
-              <mat-icon style="color: #014255;">auto_graph</mat-icon><span class="ms-4">Skills</span>
+              <mat-icon style="color: #014255;">auto_graph</mat-icon><span class="ms-4" translate>HEADER.SKILLS</span>
             </mat-list-item>
   
             <mat-list-item (click)="sidenav.toggle()" routerLinkActive="active" routerLink="/resume" ariaCurrentWhenActive="page">
-              <mat-icon style="color: #014255;">description</mat-icon><span class="ms-4">Resume</span>
+              <mat-icon style="color: #014255;">description</mat-icon><span class="ms-4" translate>HEADER.RESUME</span>
             </mat-list-item>
   
             <mat-list-item (click)="sidenav.toggle()" routerLinkActive="active" routerLink="/works" ariaCurrentWhenActive="page">
-              <mat-icon style="color: #014255;">code</mat-icon><span class="ms-4">Works</span>
+              <mat-icon style="color: #014255;">code</mat-icon><span class="ms-4" translate>HEADER.WORKS</span>
             </mat-list-item>
   
             <mat-list-item (click)="sidenav.toggle()" routerLinkActive="active" routerLink="/contact" ariaCurrentWhenActive="page">
-              <mat-icon style="color: #014255;">mail_outline</mat-icon><span class="ms-4">Contact</span>
+              <mat-icon style="color: #014255;">mail_outline</mat-icon><span class="ms-4" translate>HEADER.CONTACT</span>
             </mat-list-item>
   
         </mat-nav-list>

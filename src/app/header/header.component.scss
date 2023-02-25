@@ -181,3 +181,8 @@ span{
 ::ng-deep.mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
    border-color: #014255!important; /*outer ring color change*/
 }
+
+.lang-menu button:hover {
+    color: #014255!important;
+    font-weight: bold!important;
+}
